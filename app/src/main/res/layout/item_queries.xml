@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_alignBottom="@+id/type"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/avatar"
+            android:alpha="0.8"
+            tools:text="Nuru Sherpa" />
+
+        <TextView
+            android:id="@+id/title_subject_prefix"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="4dp"
+            android:alpha="0.8"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/title_subject" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_subject_prefix"
+            android:layout_alignStart="@+id/title_subject_prefix"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_hospital"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/type"
+            android:layout_alignBottom="@+id/type"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:alpha="0.8"
+            android:gravity="center_vertical|end"
+            tools:text="Oct 6, 2018" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

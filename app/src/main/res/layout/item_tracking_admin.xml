@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:selectableItemBackground"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nuru Sherpa" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/email"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:autoLink="email"
+            android:drawableStart="@drawable/ic_email_black_24dp"
+            android:drawablePadding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="nurusherpa@gmail.com" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:autoLink="phone"
+            android:drawableStart="@drawable/ic_local_phone_black_24dp"
+            android:drawablePadding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:text="985900832" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_start_date"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.8"
+            android:text="@string/value_start_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_end_date"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:text="@string/value_end_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_start_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tracking_start_date"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:autoLink="phone"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_start_date"
+            tools:text="Oct 4, 2018" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tracking_end_date"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:autoLink="phone"
+            android:drawableEnd="@drawable/ic_date_range_black_24dp"
+            android:drawablePadding="4dp"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="@+id/tracking_start_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tracking_start_date"
+            tools:text="Oct 14, 2018" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/iron"
+            app:layout_constraintEnd_toStartOf="@+id/delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tracking_start_date" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/edit"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/value_edit"
+            app:layout_constraintEnd_toStartOf="@+id/delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/primary"
+            android:text="@string/value_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit"
+            app:layout_constraintTop_toTopOf="@+id/edit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

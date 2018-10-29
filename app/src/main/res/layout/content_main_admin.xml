@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".admin.AdminHomeActivity"
+    tools:showIn="@layout/activity_home_admin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/banner" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_tourist"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:onClick="onAddTourist"
+                android:text="@string/value_manage_tourist"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_service"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:onClick="onServiceClicked"
+                android:text="@string/value_manage_services"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/title_latest_queries" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawableStart="@drawable/ic_add_black_24dp"
+                android:gravity="end"
+                android:onClick="onViewAllClick"
+                android:text="@string/title_view_all"
+                android:textColor="@color/accent" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="8dp"
+            tools:listitem="@layout/item_queries" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

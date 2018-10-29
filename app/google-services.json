@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "153045378762",
+    "firebase_url": "https://touristinformationapp.firebaseio.com",
+    "project_id": "touristinformationapp",
+    "storage_bucket": "touristinformationapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153045378762:android:365a403a66dfc991",
+        "android_client_info": {
+          "package_name": "com.nepal.tia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153045378762-aml48bdc342kmi3r3u9ub1q8qjemjpu3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nepal.tia",
+            "certificate_hash": "5133f91df10d32ee6cc24772809dd551430df9df"
+          }
+        },
+        {
+          "client_id": "153045378762-nmgdl8fkr5thvqbcsa7h19jds101ppmj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHwQ1LI5JpCshFQDEIrPxxFelZCI-GU5w"
+        },
+        {
+          "current_key": "AIzaSyCHwQ1LI5JpCshFQDEIrPxxFelZCI-GU5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153045378762-nmgdl8fkr5thvqbcsa7h19jds101ppmj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
